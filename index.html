@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="fr">
+<head>    
+  <title>Feel The Music</title>  <!-- IMPORTANT !!  -->
+  <meta name="Content-Type" charset="UTF-8">   <!-- IMPORTANT !! encodage des caractères (permet d'avoir les accent en ligne, pour le FR) -->
+
+  <meta name="copyright" content="All Rights Reserved - AUTEUR" />  <!-- metadonné pour les droits du site, changer l'AUTEUR -->
+  <meta name="Content-Language" content="fr">   <!-- métadonné qui renseigne la langue de la page -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- IMPORTANT !! métadonnée qui permet d'adapter la taille décran aux mobiles -->
+
+  <meta name="Description" content="Courte description de la page"> <!-- IMPORTANT !! Sujet du site (apparaît en description du site sur google) -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" type="text/css" href="css/accueil.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="css/hamburgers.css" rel="stylesheet">
+</head>
+
+<body>
+
+<main>
+
+<button class="hamburger hamburger--collapse-r" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>  
+
+<div class="page-1">
+  <a class="burger-text" href="noteintention.html">1 - Note d'intention</a>
+  <a class="burger-text" href="etatart.html">2 - État de l'art</a>
+  <a class="burger-text" href="expp.html">3 - Tester l'expérience</a>
+</div>
+
+    <div class="left">
+
+     <a href="noteintention.html"> <h1 id="full"> Note d'intention </h1> </a>
+
+     <h2 class="hidden">Découvrez ma note</h2>
+      
+    </div>
+
+
+
+    <div class="right">
+
+      <a href="etatart.html"> <h1 id="empty"> État de l'art </h1> </a>
+      <h2 class="hidden-2">Mon benchmark</h2>
+
+    </div>
+
+</main>
+
+
+
+
+
+
+
+
+
+
+<!-- scripts -->
+<script src="js/particles.js"></script>
+<script src="js/app.js"></script>
+
+<script src="js/jquery-1.11.3.min.js"></script>   <!-- lien vers la bibliothèque jquery dans le votre dossier js -->
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>  <!-- lien vers la bibliothèque jquery ( qui permet de gérer les courbes de vitesse) -->
+<script type="text/javascript" src="js/volume-2.js"> </script>  <!-- lien vers la page index.js qui contient toutes vos fonctions qui concerne cette page -->
+
+<script src="js/lib/stats.js"></script>
+
+<script>
+  // Look for .hamburger
+  var hamburger = document.querySelector(".hamburger");
+  // On click
+  hamburger.addEventListener("click", function() {
+    // Toggle class "is-active"
+    hamburger.classList.toggle("is-active");
+    // Do something else, like open/close menu
+  });
+
+  $(".hamburger").click(function() {
+  $(".page-1").toggleClass('active');
+});
+
+$(".cross").click(function() {
+    $(".page-1").removeClass('active');
+});
+
+$(".left").mouseenter(function(){
+    $('h2.hidden').animate({opacity:1},50);
+    });
+
+$(".left").mouseleave(function(){
+    $('h2.hidden').animate({opacity:0},100);
+    });
+
+$(".right").mouseenter(function(){
+    $('h2.hidden-2').animate({opacity:1},50);
+    });
+
+$(".right").mouseleave(function(){
+    $('h2.hidden-2').animate({opacity:0},100);
+    });
+</script>
+
+<script>
+  var count_particles, stats, update;
+  stats = new Stats;
+  stats.setMode(0);
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.left = '0px';
+  stats.domElement.style.top = '0px';
+  document.body.appendChild(stats.domElement);
+  count_particles = document.querySelector('.js-count-particles');
+  update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</body>
+
+</html>

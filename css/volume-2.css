@@ -1,0 +1,152 @@
+html{
+	width:100vw;
+	height: 100vh;
+}
+
+body{
+	width:100%;
+	position:relative;
+	height: 100%;
+	margin:0;
+}
+
+@font-face {
+ font-family: "aroly";
+ src: url("/fonts/AROLY.ttf") format("ttf")
+}
+
+
+main{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+
+.right{
+	width: 50vw;
+	height: 100vh;
+
+	background: linear-gradient(138deg, #e8da11, #e87211, #c831b5, #3711d0);
+	background-size: 800% 800%;
+
+	-webkit-animation: AnimationName 5s ease infinite;
+	-moz-animation: AnimationName 5s ease infinite;
+	animation: AnimationName 5s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+
+
+
+h2.hidden, h2.hidden-2{
+	position: absolute;
+	font-size: 2rem;
+	margin-top: 29%;
+	transition: .5s;
+}
+
+h2.hidden{
+	font-family: Helvetica;
+	color: white;
+	margin-left: 16%;
+}
+
+h2.hidden-2{
+	color: white;
+	font-family: Helvetica;
+	margin-left: 19%;
+}
+
+.left{
+	width: 50vw;
+	height: 100vh;
+
+background: linear-gradient(320deg, #e8da11, #e87211, #c831b5, #3711d0);
+background-size: 800% 800%;
+
+-webkit-animation: AnimationName 5s ease infinite;
+-moz-animation: AnimationName 5s ease infinite;
+animation: AnimationName 5s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+
+.jx-right{
+	background-position: center;
+	background-size: cover;
+}
+
+h1#full, #empty{
+	position: absolute;
+	font-size: 4rem;
+	margin-top: 22%;
+	margin-left: 12%;
+	cursor: pointer;
+}
+
+#full{
+	font-family: Helvetica;
+	color: white;
+	margin: 0 auto;
+}
+
+#empty{
+	color: white;
+	margin-left: 16%;
+	font-family: Helvetica;
+	font-weight: 800;
+}
+
+.page-1{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	height: 13vh;
+	background-color: white;
+	margin-top: -30%;
+	transition: 0.5s;
+	margin-left: 5%;
+}
+
+.page-1.active{
+	margin-top: 0px;
+}
+
+a.burger-text{
+	margin-top: 2%;
+	color: black; 
+	font-weight: 800;
+	font-family: "Helvetica";
+	margin-left: 2%;
+	font-size: 1rem;
+}
